@@ -20,5 +20,10 @@
  */
 Ext.define('MBilling.view.trunkGroup.Controller', {
     extend: 'Ext.ux.app.ViewController',
-    alias: 'controller.trunkgroup'
+    alias: 'controller.trunkgroup',
+    onEdit: function() {
+        var me = this;
+        me.formPanel.reset();
+        me.callParent(arguments);
+    }
 });

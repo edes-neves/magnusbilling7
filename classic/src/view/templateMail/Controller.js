@@ -21,6 +21,7 @@ Ext.define('MBilling.view.templateMail.Controller', {
     },
     onEdit: function() {
         var me = this;
+        me.formPanel.reset();
         me.lookupReference('generalTab').show();
         me.callParent(arguments);
     }
